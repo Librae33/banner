@@ -1,0 +1,87 @@
+@charset "utf-8";
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.tip li {
+	list-style: none;
+	float: left;
+	width: 15px;
+	height: 15px;
+	background: cadetblue;
+	margin: 3px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.tip li.bg {
+	background: #7FFFD4;
+}
+
+a {
+	text-decoration: none;
+}
+
+.banner {
+	position: relative;
+	height: 250px;
+	width: 600px;
+	margin: 20px auto;
+	overflow: hidden;
+}
+
+.banner .inner {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 600px;
+	/*根据传入的图片的数量再动态改变*/
+	height: 100%;
+}
+
+.banner .inner div {
+	height: 250px;
+	width: 600px;
+	border: none;
+	float: left;
+	background: url(../img/default.gif) no-repeat center #eee;
+}
+.banner .inner img{
+	display: none;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	filter:alpha(opacity=0);
+}
+.banner .tip {
+	position: absolute;
+	top: 210px;
+	left: 410px;
+}
+
+.banner a {
+	height: 45px;
+	width: 30px;
+	position: absolute;
+	top: 50%;
+	background-image: url(../img/pre.png);
+	background-repeat: no-repeat;
+	display: none;
+	margin-top: -22.5px;
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+}
+
+.banner a.btnLeft {
+	left: 20px;
+}
+
+.banner a.btnRight {
+	right: 20px;
+	background-position: -50px;
+}
+
+.banner:hover a {
+	display: block;
+}
